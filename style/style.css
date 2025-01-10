@@ -37,6 +37,19 @@ header {
     margin: 0 auto;
     padding: 0 20px;
 }
+.brand-name {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #F2BED1;
+    margin: 0;
+}
+
+.brand-name h1 {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
 
 .logo img {
     height: 70px; /* Increased logo size */
