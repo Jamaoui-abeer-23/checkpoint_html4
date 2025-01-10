@@ -208,20 +208,40 @@ footer p {
     margin-top: 20px;
 }
 
-/* Intro Section (Home Page) */
+/* Intro Section */
 .intro {
     text-align: center;
-    margin: 40px;
+    padding: 3rem 1rem;
+    
+    
+    margin: 2rem auto;
+    max-width: 800px;
+    
+}
+
+.intro-logo img {
+    width: 120px; /* Adjust the size as needed */
+    height: auto;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-logo img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .intro h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #F2BED1;
+    margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 .intro p {
     font-size: 1.2rem;
-    color: #555;
+    color: #6C6C6C;
+    line-height: 1.6;
 }
 
 /* Product Section (Shop Page) */
