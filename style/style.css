@@ -13,50 +13,95 @@ h1, h2, h3, p, a, button {
     font-family: inherit;
 }
 
-/* General Header Styling */
+/* Header Styling */
 header {
-    background-color: #F9F5F6;
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky;
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
     top: 0;
-    z-index: 1000;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Ensure it stays on top */
+    box-sizing: border-box;
+    transition: top 0.3s; /* Smooth transition for positioning */
 }
 
-header nav {
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    max-height: 4px;
+
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-header .logo h1 {
-    font-size: 24px;
-    color: #F2BED1;
+.logo img {
+    height: 70px; /* Increased logo size */
+    width: auto;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.brand-name h1 {
+    font-size: 2rem;
+    color: #F2BED1; /* Soft pink color */
+    text-align: center;
     margin: 0;
     font-family: 'Arial', sans-serif;
 }
 
-header .nav-links {
-    list-style: none;
+.navbar ul {
     display: flex;
-    gap: 20px;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
-header .nav-links li {
-    display: inline;
+.navbar li {
+    margin-left: 20px;
 }
 
-header .nav-links a {
+.navbar a {
     text-decoration: none;
-    font-size: 16px;
-    color: #FDCEDF;
+    color: #F2BED1;
+    font-size: 1rem;
     transition: color 0.3s ease;
 }
 
-header .nav-links a:hover {
-    color: #F2BED1;
+.navbar a:hover {
+    color: #FDCEDF; /* Hover color */
+}
+
+/* Hover effect on logo */
+.logo img:hover {
+    transform: scale(1.1); /* Slightly enlarge the logo when hovered */
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 50px; /* Adjusted for mobile view */
+    }
+
+    .brand-name h1 {
+        font-size: 1.5rem;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
 }
 /* Footer */
 footer {
