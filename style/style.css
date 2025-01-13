@@ -24,106 +24,125 @@ body {
     color: #333; /* Couleur neutre chic */
 }
 
-/* Header Styling */
-header {
-    background-color: #fff;
-    padding: 20px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Fixed Header Styling */
+.fixed-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10; /* Ensure it stays on top */
-    box-sizing: border-box;
-    transition: top 0.3s; /* Smooth transition for positioning */
+    z-index: 1000;
+    background-color: #F9F5F6;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
 }
 
+/* Header Container */
 .header-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    max-height: 4px;
-
-    margin: 0 auto;
-    padding: 0 20px;
-}
-.brand-name {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    
-    
-    margin: 0;
+    justify-content: space-between;
+    padding: 10px 20px;
 }
 
+/* Logo Styling */
+.logo img {
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Brand Name Styling */
 .brand-name h1 {
+    font-family: "Great Vibes", cursive;
+    font-size: 2.5rem;
     margin: 0;
-    font-family: 'Great Vibes', cursive;
-    font-size: 5rem;
-    font-weight: 500;
-    color: #FB9EC6; /* Couleur pastel élégante */
     text-align: center;
 }
 
-.logo img {
-    height: 70px; /* Increased logo size */
-    width: auto;
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+/* Navbar Toggler */
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
-
-    
-
-.navbar ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.navbar-toggler-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #F2BED1;
+    display: block;
+    position: relative;
 }
 
-.navbar li {
-    margin-left: 20px;
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: #F2BED1;
+    display: block;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s;
 }
 
-.navbar a {
-    text-decoration: none;
+.navbar-toggler-icon::before {
+    top: -8px;
+}
+
+.navbar-toggler-icon::after {
+    top: 8px;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
     color: #F2BED1;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
 }
 
-.navbar a:hover {
-    color: #FDCEDF; /* Hover color */
+.navbar-nav .nav-link:hover {
+    background-color: #FDCEDF;
+    border-radius: 5px;
 }
 
-/* Hover effect on logo */
-.logo img:hover {
-    transform: scale(1.1); /* Slightly enlarge the logo when hovered */
+/* Offcanvas Styling */
+.offcanvas-header {
+    background-color: #F8E8EE;
+    border-bottom: 1px solid #FDCEDF;
 }
 
-/* Make it responsive */
+.offcanvas-body {
+    background-color: #F9F5F6;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
+    /* Center Brand Name in Mobile View */
+    .brand-name {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
     .header-container {
-        flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
     }
 
-    .logo img {
-        height: 50px; /* Adjusted for mobile view */
+    .navbar-toggler {
+        display: block;
     }
 
-    .brand-name h1 {
-        font-size: 1.5rem;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar li {
-        margin: 10px 0;
+    .navbar-nav {
+        text-align: center;
     }
 }
 /* Footer Styles */
@@ -216,6 +235,24 @@ footer p {
     font-size: 1rem;
     color: #8d8789;
     margin-top: 20px;
+}
+/* Responsive footer for small screens */
+@media (max-width: 768px) {
+    footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .subscribe {
+        width: 100%; /* Ensure full width for smaller screens */
+    }
+
+    footer .subscribe input[type="email"],
+    footer .subscribe button {
+        width: 100%; /* Full width for input and button */
+        margin-bottom: 10px;
+    }
 }
 
 /* Intro Section */
@@ -405,9 +442,8 @@ footer p {
     }
 
     .left-images, .right-images {
-        width: 80%;
-        flex-direction: row;
-        justify-content: space-around;
+        
+        display: hidden;
     }
 }
 /* Contact Section */

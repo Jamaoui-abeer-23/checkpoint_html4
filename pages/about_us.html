@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chic Store - About Us</title>
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="icon" href="../assets/logo.png" type="image/x-icon"/>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
 
@@ -17,26 +22,34 @@
         <div class="header-container">
             <!-- Logo (Left) -->
             <div class="logo">
-                <img src="../assets/logo.png" alt="Brand Logo">
+                <img src="assets/logo.png" alt="Brand Logo">
             </div>
     
             <!-- Brand Name (Center) -->
             <div class="brand-name">
                 <h1>Chic Store</h1>
             </div>
-    
-            <!-- Navbar (Right) -->
-            <nav class="navbar">
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../pages/shop.html">Shop</a></li>
-                    <li><a href="../pages/about_us.html">About Us</a></li>
-                    <li><a href="../pages/contact.html">Contact</a></li>
+             <!-- Navbar Toggle Button (Right for Mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+            <!-- Offcanvas Navbar -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../pages/shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="../pages/about_us.html" class="nav-link">About Us</a></li>
+                    <li><a href="../pages/contact.html" class="nav-link">Contact</a></li>
                 </ul>
-            </nav>
+            </div>
+        </div>
         </div>
     </header>
-
 
     <!-- About Us Section -->
 <section class="about-us">
