@@ -25,15 +25,18 @@ body {
 }
 
 /* Fixed Header Styling */
-.fixed-header {
+.header-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    
     background-color: #F9F5F6;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
+    z-index: 10; /* Ensure it stays on top */
+    box-sizing: border-box;
+    transition: top 0.3s; /* Smooth transition for positioning */
 }
 
 /* Header Container */
@@ -157,6 +160,8 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 0 10%;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 10px;
 }
 
 /* Logo Styles in Footer */
@@ -191,7 +196,7 @@ footer {
     padding: 10px;
     font-size: 1rem;
     border: 1px solid #ddd;
-    width: 100%; /* Make the email input fill up available space */
+    flex-grow: 2; /* Let the input take more space */
     margin-right: 10px; /* Space between input and button */
 }
 
@@ -202,7 +207,7 @@ footer {
     color: white;
     cursor: pointer;
     font-size: 1rem;
-    width: 50%; /* Make the button fill up remaining space */
+    flex-grow: 1; /* Ensure equal height with input */
 }
 
 /* Social Links Section */
@@ -236,22 +241,47 @@ footer p {
     color: #8d8789;
     margin-top: 20px;
 }
-/* Responsive footer for small screens */
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    footer .footer-content {
-        flex-direction: column;
+    .footer-top {
+        flex-direction: column; /* Stack items vertically */
         align-items: center;
         text-align: center;
     }
 
-    footer .subscribe {
-        width: 100%; /* Ensure full width for smaller screens */
+    .footer-logo {
+        margin-bottom: 15px; /* Add space between sections */
     }
 
-    footer .subscribe input[type="email"],
-    footer .subscribe button {
-        width: 100%; /* Full width for input and button */
-        margin-bottom: 10px;
+    .brand-name {
+        margin-bottom: 15px; /* Add space between sections */
+    }
+
+    .subscribe {
+        width: 100%; /* Full width on small screens */
+        flex-direction: column; /* Stack input and button */
+    }
+
+    #subscribe-email {
+        margin-right: 0; /* Remove margin for stacked layout */
+        margin-bottom: 10px; /* Add space below the input */
+        width: 100%; /* Full width for input */
+    }
+
+    .subscribe button {
+        width: 100%; /* Full width for button */
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-name h1 {
+        font-size: 1.8rem; /* Adjust font size for smaller screens */
+    }
+
+    #subscribe-email, .subscribe button {
+        font-size: 0.9rem; /* Adjust input and button font size */
+        padding: 8px; /* Adjust padding */
     }
 }
 
