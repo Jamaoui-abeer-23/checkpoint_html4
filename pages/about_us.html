@@ -20,21 +20,26 @@
 
     <header>
         <div class="header-container">
-            <!-- Logo (Left) -->
-            <div class="logo">
-                <img src="../assets/logo.png" alt="Brand Logo">
-            </div>
+            <!-- Offcanvas Navbar Button (Left for Mobile) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            
     
             <!-- Brand Name (Center) -->
             <div class="brand-name">
                 <h1>Chic Store</h1>
             </div>
-             <!-- Navbar Toggle Button (Right for Mobile) -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-            <!-- Offcanvas Navbar -->
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    
+            <!-- Shopping Cart Link (Right) -->
+            <div class="cart-link">
+                <a href="../pages/cart.html" class="nav-link">Shopping Cart</a>
+            </div>
+        </div>
+    
+        <!-- Offcanvas Navbar -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -48,9 +53,7 @@
                 </ul>
             </div>
         </div>
-        </div>
     </header>
-
     <!-- About Us Section -->
 <section class="about-us">
     <!-- Left Column with Images -->

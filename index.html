@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Chic Store</title>
+    
     <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -19,36 +20,40 @@
 </head>
 <body>
     <header>
-        
         <div class="header-container">
-            <!-- Logo (Left) -->
-            <div class="logo">
-                <img src="assets/logo.png" alt="Brand Logo">
-            </div>
+            <!-- Offcanvas Navbar Button (Left for Mobile) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            
     
             <!-- Brand Name (Center) -->
             <div class="brand-name">
                 <h1>Chic Store</h1>
             </div>
-             <!-- Navbar Toggle Button (Right for Mobile) -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-            <!-- Offcanvas Navbar -->
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    
+            <!-- Sign Up and Sign In (Right) -->
+            <div class="auth-links">
+                <a href="pages/signup.html" class="nav-link">Sign Up</a>
+                <a href="pages/signin.html" class="nav-link">Sign In</a>
+            </div>
+        </div>
+    
+        <!-- Offcanvas Navbar -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav">
-                    <li><a href="#" class="nav-link">Home</a></li>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="pages/shop.html" class="nav-link">Shop</a></li>
                     <li><a href="pages/about_us.html" class="nav-link">About Us</a></li>
                     <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </div>
-        </div>
         </div>
     </header>
 
@@ -121,5 +126,15 @@
         <!-- Copyright Text -->
     <p>&copy; 2025 Chic Store. All rights reserved.</p>
     </footer>
+      <!-- Offcanvas Toggle JavaScript -->
+    <script>
+        // JavaScript to toggle the offcanvas menu
+        const offcanvasBtn = document.getElementById('offcanvas-btn');
+        const offcanvasMenu = document.getElementById('offcanvas-menu');
+
+        offcanvasBtn.addEventListener('click', () => {
+            offcanvasMenu.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>

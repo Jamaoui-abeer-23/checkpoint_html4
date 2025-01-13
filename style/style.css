@@ -30,7 +30,6 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    
     background-color: #F9F5F6;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
@@ -64,6 +63,21 @@ body {
     font-size: 2.5rem;
     margin: 0;
     text-align: center;
+}
+
+/* Auth Links (Right) */
+.auth-links a, .cart-link a {
+    color: #F2BED1;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+}
+
+.auth-links a:hover, .cart-link a:hover {
+    background-color: #FDCEDF;
+    border-radius: 5px;
 }
 
 /* Navbar Toggler */
@@ -102,21 +116,6 @@ body {
     top: 8px;
 }
 
-/* Navbar Links */
-.navbar-nav .nav-link {
-    color: #F2BED1;
-    font-family: "Raleway", sans-serif;
-    font-size: 1.2rem;
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-}
-
-.navbar-nav .nav-link:hover {
-    background-color: #FDCEDF;
-    border-radius: 5px;
-}
-
 /* Offcanvas Styling */
 .offcanvas-header {
     background-color: #F8E8EE;
@@ -129,25 +128,40 @@ body {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    /* Center Brand Name in Mobile View */
+    /* Stack the logo and navbar elements */
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    /* Center Brand Name on Mobile */
     .brand-name {
+        position: relative;
+        top: 10px;
+        font-size: 2rem;
+    }
+
+    /* Show Navbar Toggler */
+    .navbar-toggler {
+        display: block;
         position: absolute;
+        top: 80px; /* Slightly below the brand name */
         left: 50%;
         transform: translateX(-50%);
     }
 
-    .header-container {
-        justify-content: space-between;
+    /* Hide Auth Links on Mobile */
+    .auth-links {
+        display: none;
     }
-
-    .navbar-toggler {
-        display: block;
-    }
-
-    .navbar-nav {
-        text-align: center;
+    .cart-link {
+        display: none;
     }
 }
+
+
 /* Footer Styles */
 footer {
     background-color: #F9F5F6; /* Light background color */
