@@ -1,16 +1,27 @@
 /* General Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
     margin: 0;
     padding: 0;
     background-color: #F9F5F6;
-    color: #333;
+    
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
 }
 
-h1, h2, h3, p, a, button {
+ h2, h3, p, a, button {
     margin: 0;
     padding: 0;
-    font-family: inherit;
+    
+}
+ h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #333; /* Couleur neutre chic */
 }
 
 /* Header Styling */
@@ -41,14 +52,18 @@ header {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 2rem;
-    color: #F2BED1;
+    
+    
     margin: 0;
 }
 
 .brand-name h1 {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    font-weight: 500;
+    color: #FB9EC6; /* Couleur pastel élégante */
+    text-align: center;
 }
 
 .logo img {
@@ -57,13 +72,8 @@ header {
     transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.brand-name h1 {
-    font-size: 2rem;
-    color: #F2BED1; /* Soft pink color */
-    text-align: center;
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-}
+
+    
 
 .navbar ul {
     display: flex;
@@ -143,7 +153,7 @@ footer {
 
 /* Brand Name Styles */
 .brand-name h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #8d8789; /* Soft pink color */
     margin: 0;
     text-align: center;
