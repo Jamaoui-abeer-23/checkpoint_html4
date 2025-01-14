@@ -18,4 +18,6 @@ Cart Page Design:
 
 The cart page features a clear display of the user's selected items, with options to update quantities or remove items. Each section is clearly separated, and call-to-action buttons (like "Checkout") are prominently placed.
 The cart maintains the same minimalist, chic aesthetic of the rest of the site to ensure visual consistency.
+
+
 Overall, the design choices focused on creating an intuitive, seamless experience for users while maintaining the brand's identity as a modern, stylish, and approachable online store.
