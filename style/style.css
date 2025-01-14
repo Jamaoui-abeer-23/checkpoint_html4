@@ -494,7 +494,7 @@ footer p {
 .contact-section {
     max-width: 800px;
     margin: 50px auto;
-    padding: 60px;
+    padding: 100px;
     background-color: #F9F5F6; /* Light neutral background */
     border-radius: 15px;
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
@@ -725,4 +725,252 @@ footer .social-links a:hover {
 
 .card button:hover {
     background-color: #F2BED1;
+}
+
+/* General Styles for Authentication Pages */
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    background-color: #F9F5F6;
+}
+
+.auth-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.auth-container h2 {
+    font-family: "Great Vibes", cursive;
+    color: #F2BED1;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.auth-container label {
+    text-align: left;
+    margin-bottom: 5px;
+    color: #8d8789;
+    font-size: 1rem;
+}
+
+.auth-container input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.auth-container button {
+    background-color: #F2BED1;
+    border: none;
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-container button:hover {
+    background-color: #FDCEDF;
+}
+
+.auth-container p {
+    margin-top: 15px;
+    color: #8d8789;
+}
+
+.auth-container a {
+    color: #F2BED1;
+    text-decoration: none;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .auth-container {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .auth-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .auth-container label {
+        font-size: 0.9rem;
+    }
+
+    .auth-container input,
+    .auth-container button {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .auth-container p {
+        font-size: 0.9rem;
+    }
+
+    .auth-container a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-container h2 {
+        font-size: 1.6rem;
+    }
+
+    .auth-container input,
+    .auth-container button {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+
+    .auth-container p {
+        font-size: 0.8rem;
+    }
+}
+/* Main Section */
+.cart-container {
+    padding: 100px 20px 20px; /* Account for fixed header */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cart-container h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #F2BED1;
+    margin-bottom: 20px;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.cart-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.item-details p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.quantity button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background-color: #F2BED1;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.quantity input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.remove-btn {
+    background-color: #FF6F61;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.cart-total {
+    text-align: center;
+}
+
+.cart-total h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.checkout-btn {
+    background-color: #F2BED1;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .quantity button {
+        width: 25px;
+        height: 25px;
+    }
 }
